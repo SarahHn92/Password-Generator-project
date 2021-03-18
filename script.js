@@ -26,40 +26,7 @@ function generatePassword() {
   useLowercaseLetters = getLowercaseInput();
   if (useLowercaseLetters === false)
   //incomplete
-function getLowercaseInput() {
-  var lowercaseInput = prompt("Do you want to use lowercase letters? (Type 'y' or 'n')");
-  var cancelPressed = useLowercase === null;
-  console.log(getLowercaseInput);
-  var y = true;
-  var n =false;
 
-  if (!cancelPressed) {
-    //check if user typed y or n
-    // 
-    var isLowercaseSelected = lowercaseInput === y || n;
-    console.log(lowercaseInput);
-    
-  }
-
-  // function getPasswordLength() {
-  //   var passwordLength = prompt("Choose password length (between 8-128 characters):");
-  //   var cancelPressed = passwordLength === null;
-  //   console.log(passwordLength);
-  
-  //   if (!cancelPressed) {
-  //     var parsedPasswordLength = parseInt(passwordLength);
-  //     var isPasswordLengthValid = parsedPasswordLength >= 8 && parsedPasswordLength <= 128;
-  //     while (isPasswordLengthValid === false && !cancelPressed) {
-  //       passwordLength = prompt("That is not a valid input. Number must be between 8 and 128. Choose password length (between 8-128 characters):");
-  //       cancelPressed = passwordLength === null;
-  //       parsedPasswordLength = parseInt(passwordLength);
-  //       isPasswordLengthValid = parsedPasswordLength >= 8 && parsedPasswordLength <= 128;
-  //     }
-  //   }
-    
-  //   return passwordLength
-  // }
-  
   // return useLowercase
 // }
 
@@ -142,7 +109,23 @@ function getPasswordLength() {
 
 
 
+function getLowercaseInput() {
+  var lowercaseInput = prompt("Do you want to use lowercase letters? (Type 'y' or 'n')");
+  var cancelPressed = useLowercase === null;
+  console.log(getLowercaseInput);
+  var y = true;
+  var n =false;
 
+  if (!cancelPressed) {
+    //check if user typed y or n
+    // 
+    var isLowercaseSelected = lowercaseInput === y || n;
+    console.log(lowercaseInput);
+    
+  }
+
+
+  
 
 
 //        
