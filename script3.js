@@ -8,7 +8,8 @@ const specialChars = "!?@#$%^&*()_-+=~/".split("");
 // Empty array to take all choices
 let allRequestedCharacters = [];
 
-function generatePassword() {
+
+function prompting() {
     length = parseInt(prompt('Please specify the password length./n(Choose a number between 8 and 28)'));
     if (length <8 || length >128) {
         alert('Please specify a length between 8 and 128 characters.')
@@ -26,11 +27,27 @@ function generatePassword() {
         allRequestedCharacters.push(...uppercaseLetters)
     }
 
+    numerals = confirm('Include numbers?');
+    if (numerals) {
+        allRequestedCharacters.push(...numbers)
+    }
+
     otherChars = confirm('Include special characters?');
     if (otherChars) {
         allRequestedCharacters.push(...specialChars)
     }
     console.log(allRequestedCharacters);
+
+    if (!lcLetters && !ucLetters && !numerals && !otherChars) {
+        alert('You must choose at least one type of character.')
+        return;
+    }
+}
+
+function generatePassword() {
+    prompting();
+    const randomCharIndex = Math.floor( Math.random() * allRequestedCharacters.length );
+  console.log( randomCharIndex);
 } 
 
 generatePassword();
