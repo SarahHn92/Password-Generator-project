@@ -11,7 +11,7 @@ let allRequestedCharacters = [];
 
 
 function prompting() {
-    length = parseInt(prompt('Please specify the password length./n(Choose a number between 8 and 28)'));
+    length = parseInt(prompt('Please specify the password length. (Choose a number between 8 and 28)'));
     if (length <8 || length >128) {
         alert('Please specify a length between 8 and 128 characters.')
         return;
