@@ -5,6 +5,7 @@ const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz".split("");
 const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const numbers = "0123456789".split("");
 const specialChars = "!?@#$%^&*()_-+=~/".split("");
+var length = 0;
 // Empty array to take all choices
 let allRequestedCharacters = [];
 
@@ -47,14 +48,16 @@ function prompting() {
 function generatePassword() {
     // call prompting() to get user choices 
     prompting();
-    // getting a random number between 1 and the length of user choice array
-    const randomCharIndex = Math.floor( Math.random() * allRequestedCharacters.length );
-  
-    console.log(randomCharIndex);
-    // 
+    var result = [];
+    // while loop to loop through array while index is less than password length
+    for (var i = 0; i < length; i++) {
+        let randomChars = allRequestedCharacters[Math.floor( Math.random() * allRequestedCharacters.length )];
+        result.push(randomChars);
+        console.log(result);
+    }
+    return result.join('');
 } 
 
-generatePassword();
 
 
 // Write password to the #password input
