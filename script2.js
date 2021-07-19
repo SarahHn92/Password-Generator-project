@@ -6,24 +6,26 @@ const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const numbers = "0123456789".split("");
 const specialChars = "!?@#$%^&*()_-+=~/".split("");
 
+
+
 function passwordLength() {
    var getPasswordLength = prompt("Choose a password length (min:8 characters. max:128 characters)");
 }
 
 function useLowercase() {
-   var useLowercaseLetters = prompt("Do you want to use lowercase letters? Type Y o N");
+   var useLowercaseLetters = confirm("Do you want to use lowercase letters? Type Y or N");
 }
 
 function useUppercase() {
-   var useUppercaseLetters = prompt("Do you want to use uppercase letters? Type Y or N");
+   var useUppercaseLetters = confirm("Do you want to use uppercase letters? Type Y or N");
 }
 
 function useNumbers() {
-   var useNumbersInput = prompt ("Do you want to use special characters? Type Y or N");
+   var useNumbersInput = confim("Do you want to use special characters? Type Y or N");
 }
 
 function useSpecialChars() {
-    var useSpecialCharacters = prompt ("Do you want to use special characters? Type Y or N");
+    var useSpecialCharacters = confirm("Do you want to use special characters? Type Y or N");
 }
 // function generatePassword will return as the variable 'password' which will then write the password in the text box
 function generatePassword() {
